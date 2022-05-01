@@ -1,4 +1,10 @@
 import "./event.css";
+<<<<<<< Updated upstream
+=======
+import * as React from 'react';
+
+
+>>>>>>> Stashed changes
 export default function Event() {
     return (
       <>
