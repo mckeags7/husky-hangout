@@ -1,18 +1,38 @@
 import React, {useState, useContext} from 'react';
 import './App.css';
-import Event from './components/Events';
 
 const Main = () => {
     // hooks
-    const [event, setEvent] = useState('');
-    const [time, setTime] = useState('');
+<Datepicker
+    responsive={{
+        xsmall: {
+            controls: ['date'],
+            display: 'bottom',
+            touchUi: true
+        },
+        small: {
+            controls: ['date'],
+            display: 'center',
+            touchUi: true
+        },
+        custom: { // Custom breakpoint
+            breakpoint: 800,
+            controls: ['calendar'],
+            display: 'center',
+            touchUi: false
+        },
+    
 
-    const { addEvent } = useContext(GlobalContext);
-    const { events } = useContext(GlobalContext);
 
-    const onSubmit = e => {
+    const: [event, setEvent] = useState(''),
+    const: [time, setTime] = useState(''),
+
+    const: { addEvent } = useContext(GlobalContext),
+    const: { events } = useContext(GlobalContext),
+
+    const: onSubmit = e => {
         e.preventDefault();
-        
+
         const newEvent = {
             id: Math.floor(Math.random() * 100000000),
             event,
@@ -21,11 +41,12 @@ const Main = () => {
 
         addEvent(newEvent);
 
-        // reset the form
+        // restet the form
         setEvent('');
         setTime('');
       }
-
+    }}
+/>
     return (
         <div className="Content">
             <div className="Header">
