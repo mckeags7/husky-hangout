@@ -6,12 +6,18 @@ const Main = () => {
 <Datepicker
     responsive={{
         xsmall: {
-            controls: ['date'],
+            controls:['date', 'time'],
+            dateFormat:"DDD D MMM, YYYY",
+            timeFormat:"H:mm",
+            dateWheels:"|DDD D MMM, YYYY|",
             display: 'bottom',
             touchUi: true
         },
         small: {
-            controls: ['date'],
+            controls: ['date', 'time'],
+            dateFormat: "DDD D MMM, YYYY",
+            timeFormat: "H:mm",
+            dateWheels: "|DDD D MMM, YYYY|",
             display: 'center',
             touchUi: true
         },
