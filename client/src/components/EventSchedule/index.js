@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
-import './App.css';
+import '../../App.css';
 
-const Main = () => {
+const EventSchedule = () => {
     // hooks
 <Datepicker
     responsive={{
@@ -47,7 +47,7 @@ const Main = () => {
 
         addEvent(newEvent);
 
-        // restet the form
+        // reset the form
         setEvent('');
         setTime('');
       }
@@ -76,4 +76,4 @@ const Main = () => {
     );
 }
 
-export default Main;
+export default EventSchedule;
