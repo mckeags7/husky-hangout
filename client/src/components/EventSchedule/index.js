@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react';
+<<<<<<< Updated upstream
 import '../../App.css';
 
 const EventSchedule = () => {
@@ -39,6 +40,23 @@ const EventSchedule = () => {
     const: onSubmit = e => {
         e.preventDefault();
 
+=======
+import '/client/src/App.css'
+import Event from '../Events/index';
+import { GlobalContext } from '../context/GlobalState';
+
+const Main = () => {
+    // hooks
+    const [event, setEvent] = useState('');
+    const [time, setTime] = useState('');
+
+    const { addEvent } = useContext(GlobalContext);
+    const { events } = useContext(GlobalContext);
+
+    const onSubmit = e => {
+        e.preventDefault();
+        
+>>>>>>> Stashed changes
         const newEvent = {
             id: Math.floor(Math.random() * 100000000),
             event,
@@ -47,12 +65,20 @@ const EventSchedule = () => {
 
         addEvent(newEvent);
 
+<<<<<<< Updated upstream
         // reset the form
         setEvent('');
         setTime('');
       }
     }}
 />
+=======
+        // restet the form
+        setEvent('');
+        setTime('');
+      }
+
+>>>>>>> Stashed changes
     return (
         <div className="Content">
             <div className="Header">
@@ -76,4 +102,8 @@ const EventSchedule = () => {
     );
 }
 
+<<<<<<< Updated upstream
 export default EventSchedule;
+=======
+export default Main;
+>>>>>>> Stashed changes
